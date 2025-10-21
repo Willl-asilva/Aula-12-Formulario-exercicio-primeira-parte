@@ -1,29 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pr-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulários</title>
+    <title>Formulários 2</title>
 </head>
 <body>
-    <h1>Carros Elétricos</h1>
+    <h1>Cadastro</h1>
     <!-- Todo formulário deve estar entre as tags <form> </form> -->
-    <form  action="cadastro.php" autocomplete="on" method="post">
-        <!-- Com a tag input 
-            text - caixinha
-            name - PHP
-            id - JS
-            submit - submeter enviar
-        -->
-        <p><label for="inome">Nome Completo:</label></br><input type="text" name="nome" id="inome" required  placeholder="Digite seu Nome completo"  size="35" maxlength="30"></p> 
-        <p><label for="itipo">Modelo do Carro:</label></br><input type="text" name="tipo" id="itipo" required placeholder="Ex:Tesla Model 3" size="35" maxlength="30"></p>
-        <p><label for="isenha">Crie uma senha de Acesso:</label></br><input type="password" name="senha" id="isenha"  required minlength="6"  maxlength="15"placeholder="Minino 6 caracteres"></p>
+     <!-- Para desativar o preenchimento automático dos campos -->
+      <!-- action no form - ação executada após clicar no botão submit -->
+    <form action="cadastro.html" autocomplete="on" method="post">
+        <p><label for="inome">Nome Completo:</label> 
+            <input type="text" name="nome" id="inome"></p> 
+        <p><label for="i-email">E-mail:</label> 
+            <input type="text" name="email" id="i-email"></p>
+        <p><label for="isenha">Crie uma senha de Acesso:</label>
+            <input type="password" name="senha" id="isenha"  required minlength="6"  maxlength="15"></p>
 
-        <p>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
-        </p>
+        <!-- Para qual linguagem vamos mandar o formulário -->
+        <p><input type="submit" value="Enviar"></p>
     </form>
     
 </body>
