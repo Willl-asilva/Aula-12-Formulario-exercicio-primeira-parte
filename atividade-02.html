@@ -5,23 +5,154 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulários 2</title>
+
+    <style>  
+    /*reset das configurações padrões da pagina*/
+    *{
+        box-sizing:border-box
+    }
+
+    html,body{
+     height:100%;
+     margin:0px;
+     display:flex;
+     align-items:center;
+     justify-content:center;
+     font-family:Montserrat,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+    }
+
+
+    body{
+    background-color:#0b87db;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0px;
+    }
+
+
+/* layout */
+    .page{
+    width:100%;
+    max-width:980px;
+    display:flex;
+    align-items:center;
+  
+    }
+
+/* card */
+    .card{
+    width:540px;
+    max-width:100%;
+    background-color:#ffffff;
+    border-radius:16px;
+    padding:48px 56px;
+    align-self:center;
+    align-items: center;
+    }
+
+
+    h1{
+    font-size:44px;
+    margin:0 0 28px 0;
+    color:#2b2b2b;
+    text-align:center;
+  
+    }
+
+
+    form{
+        display:block
+    }
+    /*formato de cada label*/
+
+    label{
+        display:block;
+        font-weight:700;
+        margin-bottom:10px;
+        color:#2b2b2b;
+        font-size:18px}
+
+
+    .topico{
+        margin-bottom:26px
+    }
+    /*configuração de cada input*/
+
+    input[type="text"],input[type="email"],input[type="password"]{
+    width:100%;
+    padding:18px 20px;
+    border-radius:12px;
+    border:1px solid #e1e6ea;
+    background:#fff;
+    outline:none;
+    font-size:16px;
+
+    }
+    /*botão cadastrar e sua animação*/
+    .btn{
+    display:block;
+    width:100%;
+    padding:16px 22px;
+    border-radius:12px;
+    background-color:#0b87db;
+    color:white;
+    font-weight:700;
+    border:0;
+    font-size:18px;
+    cursor:pointer;
+    }
+    .btn:hover{
+    
+    background:linear-gradient(180deg,#59afe9,#07304e);
+  
+    }
+
+/* rodape da pagina com link*/
+    .cads{
+        margin-top:22px;
+        text-align:center;
+        color:#8b8b8b;
+    }
+    .cads a{
+        color:#0b87db;
+        text-decoration:none;
+        font-weight:600
+        }
+</style>
+
 </head>
 <body>
-    <h1>Cadastro</h1>
-    <!-- Todo formulário deve estar entre as tags <form> </form> -->
-     <!-- Para desativar o preenchimento automático dos campos -->
-      <!-- action no form - ação executada após clicar no botão submit -->
-    <form action="cadastro.html" autocomplete="on" method="post">
-        <p><label for="inome">Nome Completo:</label> 
-            <input type="text" name="nome" id="inome"></p> 
-        <p><label for="i-email">E-mail:</label> 
-            <input type="text" name="email" id="i-email"></p>
-        <p><label for="isenha">Crie uma senha de Acesso:</label>
-            <input type="password" name="senha" id="isenha"  required minlength="6"  maxlength="15"></p>
+        <div class="page">
+        <div class="card" role="main">
+        <h1>Cadastro</h1>
 
-        <!-- Para qual linguagem vamos mandar o formulário -->
-        <p><input type="submit" value="Enviar"></p>
-    </form>
-    
+
+        <form action="cadastrar.php" method="post" autocomplete="on">
+        <div class="topico">
+        <label for="nome">Nome completo</label>
+        <input id="inome" name="nome" type="text" placeholder="" required>
+        </div>
+
+
+        <div class="topico">
+        <label for="email">E-mail</label>
+        <input id="iemail" name="email" type="email" placeholder="" required>
+        </div>
+
+
+        <div class="topico">
+        <label for="senha">Senha</label>
+        <input id="isenha" name="senha" type="password" placeholder="" required>
+        </div>
+
+
+        <button class="btn" type="submit">Cadastrar</button>
+
+
+        <p class="cads">Já possui uma conta? <a href="cadastrar.php">Entrar</a></p>
+        </form>
+        </div>
+        </div>
 </body>
 </html>
